@@ -3,7 +3,7 @@ const csvParser = require("csv-parser");
 
 const fetchFeifIdsFromCSV = (csvFilePath) => {
   return new Promise((resolve, reject) => {
-    const feifIds = [];
+    const feifIds = []
     fs.createReadStream(csvFilePath)
       .pipe(csvParser())
       .on("data", (row) => {
